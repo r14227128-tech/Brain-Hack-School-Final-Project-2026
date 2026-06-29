@@ -21,7 +21,7 @@ The project consisted of two major stages:
 - **Import EEG Data**  
 Subject used: sub-010_ses-01_task-experiment_run-01_eeg.set
 
-- **Downsampling** 
+- **Downsampling**   
 The EEG data were downsampled from 1024 Hz to 250 Hz to reduce computational cost and memory usage while preserving the frequency range required for ERP and Machine Learning analysis.
 
 - **Set Montage**  
@@ -44,12 +44,21 @@ Continuous EEG signals were segmented into epochs around each stimulus presentat
 Number of epochs: Image->31, Text->30, Audio->29
 
 - **ERP Analysis**  
-ERP responses were visualized using several methods:
+ERP responses were visualized using several methods:  
 • Butterfly plots
-• Topographic maps at selected ERP latencies
-• ERP waveform comparison with topographic maps
-• Global Field Power (GFP)
+<img width="1189" height="985" alt="07_erp_butterfly" src="https://github.com/user-attachments/assets/b344f5f2-8b75-438b-a406-8fb3894aa7ab" />
+
+• Topographic maps at selected ERP latencies  
+<img width="1434" height="887" alt="09_topomaps_by_condition" src="https://github.com/user-attachments/assets/a4842714-c5f0-4ce8-9432-15059764fde9" />
+
+• ERP waveform comparison with topographic maps  
+<img width="809" height="431" alt="10_joint_image" src="https://github.com/user-attachments/assets/66b3667a-5008-45cd-87a0-3ff7b7cacb9b" />
+<img width="809" height="431" alt="10_joint_text" src="https://github.com/user-attachments/assets/7e30a5d2-b1cc-4213-812a-4092c6431756" />
+<img width="809" height="431" alt="10_joint_audio" src="https://github.com/user-attachments/assets/7f9602d7-642a-433d-8086-8d8443395087" />
+
+• Global Field Power (GFP)  
 These visualizations were used to compare the temporal and spatial brain responses among the three sensory modalities.
+<img width="1189" height="590" alt="11_gfp_comparison" src="https://github.com/user-attachments/assets/3d312cab-76b9-46d2-9724-9b7511ced9ed" />
 
 
 ### **Machine Learning Classification**
@@ -85,6 +94,7 @@ Three feature combinations were evaluated.
 | PSD                        |       56.67%      | 
 | PSD + Domain               |       61.11%      | 
 | PSD + Band Power + Domain  |       58.89%      |
+
 
 
 ## **Overall Learning Outcomes**

@@ -68,7 +68,7 @@ These visualizations were used to compare the temporal and spatial brain respons
 <img width="1189" height="590" alt="11_gfp_comparison" src="https://github.com/user-attachments/assets/3d312cab-76b9-46d2-9724-9b7511ced9ed" />
 
 
-### **Machine Learning Classification**
+### **2. Machine Learning Classification**
 Three different EEG feature extraction methods were compared.  
 ***(1) PSD Full Spectrum Features***  
 Power Spectral Density (PSD) was used to convert EEG signals from the time domain into the frequency domain.

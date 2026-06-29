@@ -18,32 +18,32 @@ The project consisted of two major stages:
 
 ## **Data Analysis and Results**
 ### **1. EEG Data Preprocessing**
-- Import EEG Data
+- ** Import EEG Data**  
 Subject used: sub-010_ses-01_task-experiment_run-01_eeg.set
 
-- Downsampling
+- Downsampling  
 The EEG data were downsampled from 1024 Hz to 250 Hz to reduce computational cost and memory usage while preserving the frequency range required for ERP and Machine Learning analysis.
 
-- Set Montage
+- Set Montage  
 The standard electrode montage was assigned using the built-in MNE montage system to correctly define the spatial locations of the EEG electrodes.
 
-- Detecting Bad Channels
+- Detecting Bad Channels  
 The EEG recording contained several signal interruptions. Therefore, the recording was cropped, resulting in 283 events from the original 639 events.
 Only perception events corresponding to the project objective were selected for further analysis.
 Bad channels were identified based on: flat signals, excessive noise, correlation with neighbouring channels; a total of 9 bad channels were detected.
 
-- Independent Component Analysis (ICA)
+- Independent Component Analysis (ICA)  
 ICA was applied to identify and remove eye-blink artifacts.
 The following EOG channels were used to detect ocular artifacts: HEOGR, HEOGL, VEOGU, VEOGL. This improves the quality of the EEG signal before further analysis.
 
-- Filtering
+- Filtering  
 A notch filter was applied to remove power-line noise, while a high-pass filter was used to remove slow baseline drift and low-frequency noise from the EEG signals.
 
-- Epoching
+- Epoching  
 Continuous EEG signals were segmented into epochs around each stimulus presentation. (Only perception trials were retained.)
 Number of epochs: Image->31, Text->30, Audio->29
 
-- ERP Analysis
+- ERP Analysis  
 ERP responses were visualized using several methods:
 • Butterfly plots
 • Topographic maps at selected ERP latencies
@@ -53,13 +53,13 @@ These visualizations were used to compare the temporal and spatial brain respons
 
 
 ### **Machine Learning Classification**
-Three different EEG feature extraction methods were compared.
-*(1) PSD Full Spectrum Features*
+Three different EEG feature extraction methods were compared.  
+***(1) PSD Full Spectrum Features***
 Power Spectral Density (PSD) was used to convert EEG signals from the time domain into the frequency domain.
 Instead of using the raw EEG waveform, PSD measures the power of each frequency within every EEG epoch.
 The PSD values from all frequencies and all channels were flattened into feature vectors, which were then used as the input features for Machine Learning.
 
-*(2) Frequency Band Power Features*
+***(2) Frequency Band Power Features***
 Instead of using every frequency individually, PSD features were grouped into the five conventional EEG frequency bands:
 • Delta (1–4 Hz)
 • Theta (4–8 Hz)
@@ -69,15 +69,15 @@ Instead of using every frequency individually, PSD features were grouped into th
 The average power within each frequency band was calculated for every EEG channel.
 These averaged band powers were used as the Machine Learning features.
 
-*(3) Time-Domain Features*
+***(3) Time-Domain Features***
 Ten statistical features were extracted directly from the EEG waveform in the time domain: mean, variance ,standard deviation, minimum voltage, maximum voltage, peak-to-peak amplitude, Root Mean Square (RMS), skewness, kurtosis, Zero Crossing Rate (ZCR).
 These features describe the statistical characteristics and signal properties of each EEG epoch without transforming the data into the frequency domain.
 
-- Support Vector Machine (SVM)
+- **Support Vector Machine (SVM)**  
 Support Vector Machine (SVM) was selected as the Machine Learning classifier because it performs well on high-dimensional datasets such as EEG signals and can effectively classify complex data using kernel functions.
 Model performance was evaluated using test accuracy, cross-validation accuracy, classification reports, and confusion matrices.
 
-- Machine Learning Results
+- **Machine Learning Results**  
 Three feature combinations were evaluated.
 
 |       **Feature Set**      | **Test Accuracy** | 

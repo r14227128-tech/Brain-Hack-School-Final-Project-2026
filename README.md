@@ -10,7 +10,7 @@ The project also aims to learn the complete EEG data analysis workflow, includin
 - Feature extraction
 - Machine Learning model development
 
-EEG preprocessing was performed using the MNE-Python library, followed by Event-Related Potential (ERP) analysis to compare the brain responses across three sensory modalities: visual pictorial (image), visual orthographic (text), and auditory (audio). Different EEG feature extraction methods were then applied to train a Machine Learning classifier for multisensory stimulus classification.  
+EEG preprocessing was performed using the MNE-Python library, followed by Event-Related Potential (ERP) analysis to compare the brain responses across three sensory modalities: *visual pictorial (image)*, *visual orthographic (text)*, and *auditory (audio)*. Different EEG feature extraction methods were then applied to train a Machine Learning classifier for multisensory stimulus classification.  
 
 The dataset used in this project is the OpenNeuro EEG Semantic Imagination and Perception Dataset. EEG signals were recorded using a 124-channel ANT Neuro EEG system. The experiment consists of two tasks: semantic imagination and semantic perception, each presented in three modalities (image, text, and audio).  
 For this project, only the perception task was used to analyze the EEG responses to multisensory stimuli.

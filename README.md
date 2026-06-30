@@ -14,6 +14,8 @@ EEG preprocessing was performed using the MNE-Python library, followed by Event-
 
 The dataset used in this project is the OpenNeuro EEG Semantic Imagination and Perception Dataset. EEG signals were recorded using a 124-channel ANT Neuro EEG system. The experiment consists of two tasks: semantic imagination and semantic perception, each presented in three modalities (image, text, and audio).  
 For this project, only the perception task was used to analyze the EEG responses to multisensory stimuli.
+<img width="1244" height="350" alt="Screenshot 2026-06-30 211848" src="https://github.com/user-attachments/assets/0fae53d2-ae53-4b08-a10f-366de6fa8303" />
+
 
 
 ## **Methods**

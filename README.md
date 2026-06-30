@@ -101,8 +101,8 @@ Three feature combinations were evaluated.
 |       **Feature Set**      | **Test Accuracy** | 
 | -------------------------- | ----------------- | 
 | PSD                        |       56.67%      | 
-| PSD + Domain               |       61.11%      | 
-| PSD + Band Power + Domain  |       58.89%      |
+| PSD + Time                 |       61.11%      | 
+| PSD + Band Power + Time    |       58.89%      |
 
 
 
